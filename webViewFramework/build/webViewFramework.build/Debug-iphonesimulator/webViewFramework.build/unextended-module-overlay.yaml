@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/mac/Library/Developer/Xcode/DerivedData/webViewFramework-aohmtukymmpyibboycetamhkgmgb/Build/Products/Debug-iphonesimulator/webViewFramework.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/mac/Documents/TDI/Project/webViewFramework/build/webViewFramework.build/Debug-iphonesimulator/webViewFramework.build/unextended-module.modulemap",
+    }]
+  }]
+}
