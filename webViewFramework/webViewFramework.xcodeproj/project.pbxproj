@@ -6,13 +6,26 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		044BAB1F26660D7300582613 /* webFrameworkUniversal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 044BAB2226660D7300582613 /* Build configuration list for PBXAggregateTarget "webFrameworkUniversal" */;
+			buildPhases = (
+				044BAB2626660D8E00582613 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = webFrameworkUniversal;
+			productName = webFrameworkUniversal;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		045C69D72664C67D00FDDD29 /* webViewFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045C69CD2664C67D00FDDD29 /* webViewFramework.framework */; };
 		045C69DC2664C67D00FDDD29 /* webViewFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C69DB2664C67D00FDDD29 /* webViewFrameworkTests.swift */; };
 		045C69DE2664C67D00FDDD29 /* webViewFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 045C69D02664C67D00FDDD29 /* webViewFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		045C69EA2664C6A000FDDD29 /* webStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045C69E92664C6A000FDDD29 /* webStoryboard.storyboard */; };
 		045C69EE2664C6FB00FDDD29 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C69ED2664C6FB00FDDD29 /* webViewController.swift */; };
-		045C6A492664CE8300FDDD29 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C6A482664CE8300FDDD29 /* searchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +47,6 @@
 		045C69DD2664C67D00FDDD29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045C69E92664C6A000FDDD29 /* webStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = webStoryboard.storyboard; sourceTree = "<group>"; };
 		045C69ED2664C6FB00FDDD29 /* webViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
-		045C6A482664CE8300FDDD29 /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +91,6 @@
 			children = (
 				045C69D02664C67D00FDDD29 /* webViewFramework.h */,
 				045C69ED2664C6FB00FDDD29 /* webViewController.swift */,
-				045C6A482664CE8300FDDD29 /* searchViewController.swift */,
 				045C69E92664C6A000FDDD29 /* webStoryboard.storyboard */,
 				045C69D12664C67D00FDDD29 /* Info.plist */,
 			);
@@ -154,6 +165,9 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					044BAB1F26660D7300582613 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					045C69CC2664C67D00FDDD29 = {
 						CreatedOnToolsVersion = 12.4;
 						LastSwiftMigration = 1240;
@@ -178,6 +192,7 @@
 			targets = (
 				045C69CC2664C67D00FDDD29 /* webViewFramework */,
 				045C69D52664C67D00FDDD29 /* webViewFrameworkTests */,
+				044BAB1F26660D7300582613 /* webFrameworkUniversal */,
 			);
 		};
 /* End PBXProject section */
@@ -200,12 +215,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		044BAB2626660D8E00582613 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#!/bin/sh \nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal \nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\" \nxcodebuild BITCODE_GENERATION_MODE=bitcode OTHER_CFLAGS=\"-fembed-bitcode\" -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build \nxcodebuild BITCODE_GENERATION_MODE=bitcode OTHER_CFLAGS=\"-fembed-bitcode\" -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"  EXCLUDED_ARCHS=\"arm64\" clean build \ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\" \ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		045C69C92664C67D00FDDD29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				045C6A492664CE8300FDDD29 /* searchViewController.swift in Sources */,
 				045C69EE2664C6FB00FDDD29 /* webViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +263,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		044BAB2026660D7300582613 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		044BAB2126660D7300582613 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		045C69DF2664C67D00FDDD29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -443,6 +493,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		044BAB2226660D7300582613 /* Build configuration list for PBXAggregateTarget "webFrameworkUniversal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044BAB2026660D7300582613 /* Debug */,
+				044BAB2126660D7300582613 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		045C69C72664C67D00FDDD29 /* Build configuration list for PBXProject "webViewFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -8,10 +8,11 @@
 import UIKit
 import WebKit
 
-public class webViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+public class webViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UIGestureRecognizerDelegate {
     @IBOutlet var webView: WKWebView!
+    @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
     
-    var searchStr: String = ""
+    public var searchStr: String = ""
     
     public override func loadView() {
         super.loadView()
@@ -20,6 +21,7 @@ public class webViewController: UIViewController, WKUIDelegate, WKNavigationDele
 
         webView.uiDelegate = self
         webView.navigationDelegate = self
+        
         self.view = self.webView
     }
     
@@ -34,16 +36,34 @@ public class webViewController: UIViewController, WKUIDelegate, WKNavigationDele
         }
         let request = URLRequest(url: url)
         self.webView?.allowsBackForwardNavigationGestures = true
-        webView.configuration.preferences.javaScriptCanOpenWindowsAutomatically = true
-        webView.load(request)
+        webView?.configuration.preferences.javaScriptCanOpenWindowsAutomatically = true
+        webView?.load(request)
+    }
+    
+    public func getStrData(str: String) {
+        self.searchStr = str
+        return
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let swipeRecognize = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(_:)))
+        self.view.addGestureRecognizer(swipeRecognize)
         setStatusBar(color: .white)
         goWeb(str: searchStr)
     }
+    
+    @objc public func swipeAction(_ sender: Any) {
+        let transition: CATransition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.reveal
+        transition.subtype = CATransitionSubtype.fromLeft
+        self.view.window!.layer.add(transition, forKey: nil)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
 }
 

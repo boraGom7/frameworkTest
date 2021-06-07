@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "42c4793db3a8b96a3636f7ff39430c3c"
+build_time: [1622529630, 377952000]
+inputs:
+  "/Users/mac/Documents/TDI/Project/webViewFramework/webViewFramework/webViewController.swift": [1622523736, 413601706]
