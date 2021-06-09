@@ -8,11 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		041078BF267080BF00EC3715 /* waterfallStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041078BE267080BF00EC3715 /* waterfallStoryboard.storyboard */; };
+		041078C82670823E00EC3715 /* scrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078C42670823E00EC3715 /* scrollViewController.swift */; };
+		041078C92670823E00EC3715 /* snsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078C52670823E00EC3715 /* snsCollectionViewController.swift */; };
+		041078CA2670823E00EC3715 /* videoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078C62670823E00EC3715 /* videoViewController.swift */; };
+		041078CB2670823E00EC3715 /* waterfallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078C72670823E00EC3715 /* waterfallViewController.swift */; };
+		041078D12670825100EC3715 /* cellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078CE2670825100EC3715 /* cellModel.swift */; };
+		041078D22670825100EC3715 /* playVideoVewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078CF2670825100EC3715 /* playVideoVewModel.swift */; };
+		041078D32670825100EC3715 /* sampleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078D02670825100EC3715 /* sampleImage.swift */; };
+		041078D62670825E00EC3715 /* pagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078D52670825E00EC3715 /* pagingViewModel.swift */; };
+		041078D92670826500EC3715 /* pinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078D82670826500EC3715 /* pinterestLayout.swift */; };
 		04E300C6265DE0CE00C842E5 /* waterfallLayoutFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E300C4265DE0CE00C842E5 /* waterfallLayoutFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		041078BE267080BF00EC3715 /* waterfallStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = waterfallStoryboard.storyboard; path = ../../../../TDI/Project/waterfallLayoutFramework_paging/waterfallLayoutFramework/waterfallStoryboard.storyboard; sourceTree = "<group>"; };
+		041078C42670823E00EC3715 /* scrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scrollViewController.swift; sourceTree = "<group>"; };
+		041078C52670823E00EC3715 /* snsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = snsCollectionViewController.swift; sourceTree = "<group>"; };
+		041078C62670823E00EC3715 /* videoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = videoViewController.swift; sourceTree = "<group>"; };
+		041078C72670823E00EC3715 /* waterfallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = waterfallViewController.swift; sourceTree = "<group>"; };
+		041078CE2670825100EC3715 /* cellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellModel.swift; sourceTree = "<group>"; };
+		041078CF2670825100EC3715 /* playVideoVewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playVideoVewModel.swift; sourceTree = "<group>"; };
+		041078D02670825100EC3715 /* sampleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sampleImage.swift; sourceTree = "<group>"; };
+		041078D52670825E00EC3715 /* pagingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pagingViewModel.swift; sourceTree = "<group>"; };
+		041078D82670826500EC3715 /* pinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pinterestLayout.swift; sourceTree = "<group>"; };
 		04E300C1265DE0CE00C842E5 /* waterfallLayoutFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = waterfallLayoutFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E300C4265DE0CE00C842E5 /* waterfallLayoutFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = waterfallLayoutFramework.h; sourceTree = "<group>"; };
 		04E300C5265DE0CE00C842E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +47,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041078C32670823E00EC3715 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				041078C42670823E00EC3715 /* scrollViewController.swift */,
+				041078C52670823E00EC3715 /* snsCollectionViewController.swift */,
+				041078C62670823E00EC3715 /* videoViewController.swift */,
+				041078C72670823E00EC3715 /* waterfallViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		041078CD2670825100EC3715 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				041078CE2670825100EC3715 /* cellModel.swift */,
+				041078CF2670825100EC3715 /* playVideoVewModel.swift */,
+				041078D02670825100EC3715 /* sampleImage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		04E300B7265DE0CE00C842E5 = {
 			isa = PBXGroup;
 			children = (
@@ -48,7 +87,11 @@
 		04E300C3265DE0CE00C842E5 /* waterfallLayoutFramework */ = {
 			isa = PBXGroup;
 			children = (
+				041078CD2670825100EC3715 /* Model */,
+				041078C32670823E00EC3715 /* ViewController */,
 				04E300C4265DE0CE00C842E5 /* waterfallLayoutFramework.h */,
+				041078D52670825E00EC3715 /* pagingViewModel.swift */,
+				041078D82670826500EC3715 /* pinterestLayout.swift */,
 				04E300C5265DE0CE00C842E5 /* Info.plist */,
 				041078BE267080BF00EC3715 /* waterfallStoryboard.storyboard */,
 			);
@@ -135,6 +178,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041078D22670825100EC3715 /* playVideoVewModel.swift in Sources */,
+				041078C82670823E00EC3715 /* scrollViewController.swift in Sources */,
+				041078D62670825E00EC3715 /* pagingViewModel.swift in Sources */,
+				041078CB2670823E00EC3715 /* waterfallViewController.swift in Sources */,
+				041078D12670825100EC3715 /* cellModel.swift in Sources */,
+				041078CA2670823E00EC3715 /* videoViewController.swift in Sources */,
+				041078D92670826500EC3715 /* pinterestLayout.swift in Sources */,
+				041078D32670825100EC3715 /* sampleImage.swift in Sources */,
+				041078C92670823E00EC3715 /* snsCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
