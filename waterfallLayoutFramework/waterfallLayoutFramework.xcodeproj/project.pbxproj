@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		041078DB267083A900EC3715 /* waterfallLayourUniversal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 041078DC267083A900EC3715 /* Build configuration list for PBXAggregateTarget "waterfallLayourUniversal" */;
+			buildPhases = (
+				041078E1267083BA00EC3715 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = waterfallLayourUniversal;
+			productName = waterfallLayourUniversal;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		041078BF267080BF00EC3715 /* waterfallStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041078BE267080BF00EC3715 /* waterfallStoryboard.storyboard */; };
 		041078C82670823E00EC3715 /* scrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078C42670823E00EC3715 /* scrollViewController.swift */; };
@@ -17,6 +31,9 @@
 		041078D32670825100EC3715 /* sampleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078D02670825100EC3715 /* sampleImage.swift */; };
 		041078D62670825E00EC3715 /* pagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078D52670825E00EC3715 /* pagingViewModel.swift */; };
 		041078D92670826500EC3715 /* pinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041078D82670826500EC3715 /* pinterestLayout.swift */; };
+		041078E3267083EE00EC3715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041078E2267083EE00EC3715 /* Assets.xcassets */; };
+		041078E82670840C00EC3715 /* end.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 041078E62670840B00EC3715 /* end.mp4 */; };
+		041078E92670840C00EC3715 /* start.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 041078E72670840C00EC3715 /* start.mp4 */; };
 		04E300C6265DE0CE00C842E5 /* waterfallLayoutFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E300C4265DE0CE00C842E5 /* waterfallLayoutFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -31,6 +48,9 @@
 		041078D02670825100EC3715 /* sampleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sampleImage.swift; sourceTree = "<group>"; };
 		041078D52670825E00EC3715 /* pagingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pagingViewModel.swift; sourceTree = "<group>"; };
 		041078D82670826500EC3715 /* pinterestLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pinterestLayout.swift; sourceTree = "<group>"; };
+		041078E2267083EE00EC3715 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		041078E62670840B00EC3715 /* end.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = end.mp4; sourceTree = "<group>"; };
+		041078E72670840C00EC3715 /* start.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = start.mp4; sourceTree = "<group>"; };
 		04E300C1265DE0CE00C842E5 /* waterfallLayoutFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = waterfallLayoutFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E300C4265DE0CE00C842E5 /* waterfallLayoutFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = waterfallLayoutFramework.h; sourceTree = "<group>"; };
 		04E300C5265DE0CE00C842E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +113,9 @@
 				041078D52670825E00EC3715 /* pagingViewModel.swift */,
 				041078D82670826500EC3715 /* pinterestLayout.swift */,
 				04E300C5265DE0CE00C842E5 /* Info.plist */,
+				041078E2267083EE00EC3715 /* Assets.xcassets */,
+				041078E62670840B00EC3715 /* end.mp4 */,
+				041078E72670840C00EC3715 /* start.mp4 */,
 				041078BE267080BF00EC3715 /* waterfallStoryboard.storyboard */,
 			);
 			path = waterfallLayoutFramework;
@@ -138,6 +161,9 @@
 			attributes = {
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					041078DB267083A900EC3715 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					04E300C0265DE0CE00C842E5 = {
 						CreatedOnToolsVersion = 12.4;
 						LastSwiftMigration = 1240;
@@ -158,6 +184,7 @@
 			projectRoot = "";
 			targets = (
 				04E300C0265DE0CE00C842E5 /* waterfallLayoutFramework */,
+				041078DB267083A900EC3715 /* waterfallLayourUniversal */,
 			);
 		};
 /* End PBXProject section */
@@ -167,11 +194,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041078E82670840C00EC3715 /* end.mp4 in Resources */,
+				041078E3267083EE00EC3715 /* Assets.xcassets in Resources */,
+				041078E92670840C00EC3715 /* start.mp4 in Resources */,
 				041078BF267080BF00EC3715 /* waterfallStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		041078E1267083BA00EC3715 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal \nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\" \nxcodebuild BITCODE_GENERATION_MODE=bitcode OTHER_CFLAGS=\"-fembed-bitcode\" -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build \nxcodebuild BITCODE_GENERATION_MODE=bitcode OTHER_CFLAGS=\"-fembed-bitcode\" -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"  EXCLUDED_ARCHS=\"arm64\" clean build \ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\" \ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04E300BD265DE0CE00C842E5 /* Sources */ = {
@@ -193,6 +243,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		041078DD267083A900EC3715 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ZDSL44DP7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		041078DE267083A900EC3715 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ZDSL44DP7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		04E300C7265DE0CE00C842E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -367,6 +435,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		041078DC267083A900EC3715 /* Build configuration list for PBXAggregateTarget "waterfallLayourUniversal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041078DD267083A900EC3715 /* Debug */,
+				041078DE267083A900EC3715 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		04E300BB265DE0CE00C842E5 /* Build configuration list for PBXProject "waterfallLayoutFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
