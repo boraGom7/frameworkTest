@@ -7,21 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041078BF267080BF00EC3715 /* waterfallStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041078BE267080BF00EC3715 /* waterfallStoryboard.storyboard */; };
 		04E300C6265DE0CE00C842E5 /* waterfallLayoutFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E300C4265DE0CE00C842E5 /* waterfallLayoutFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04E300CE265DE11800C842E5 /* waterfallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E300CD265DE11800C842E5 /* waterfallViewController.swift */; };
-		04E300D1265DE13400C842E5 /* waterfallStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E300D0265DE13400C842E5 /* waterfallStoryboard.storyboard */; };
-		04E30139265E442600C842E5 /* cellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E30138265E442600C842E5 /* cellModel.swift */; };
-		04E3013C265E465100C842E5 /* pagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E3013B265E465100C842E5 /* pagingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041078BE267080BF00EC3715 /* waterfallStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = waterfallStoryboard.storyboard; path = ../../../../TDI/Project/waterfallLayoutFramework_paging/waterfallLayoutFramework/waterfallStoryboard.storyboard; sourceTree = "<group>"; };
 		04E300C1265DE0CE00C842E5 /* waterfallLayoutFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = waterfallLayoutFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E300C4265DE0CE00C842E5 /* waterfallLayoutFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = waterfallLayoutFramework.h; sourceTree = "<group>"; };
 		04E300C5265DE0CE00C842E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04E300CD265DE11800C842E5 /* waterfallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterfallViewController.swift; sourceTree = "<group>"; };
-		04E300D0265DE13400C842E5 /* waterfallStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = waterfallStoryboard.storyboard; sourceTree = "<group>"; };
-		04E30138265E442600C842E5 /* cellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellModel.swift; sourceTree = "<group>"; };
-		04E3013B265E465100C842E5 /* pagingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pagingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +50,7 @@
 			children = (
 				04E300C4265DE0CE00C842E5 /* waterfallLayoutFramework.h */,
 				04E300C5265DE0CE00C842E5 /* Info.plist */,
-				04E300CD265DE11800C842E5 /* waterfallViewController.swift */,
-				04E300D0265DE13400C842E5 /* waterfallStoryboard.storyboard */,
-				04E30138265E442600C842E5 /* cellModel.swift */,
-				04E3013B265E465100C842E5 /* pagingViewModel.swift */,
+				041078BE267080BF00EC3715 /* waterfallStoryboard.storyboard */,
 			);
 			path = waterfallLayoutFramework;
 			sourceTree = "<group>";
@@ -133,7 +124,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E300D1265DE13400C842E5 /* waterfallStoryboard.storyboard in Resources */,
+				041078BF267080BF00EC3715 /* waterfallStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,9 +135,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E3013C265E465100C842E5 /* pagingViewModel.swift in Sources */,
-				04E300CE265DE11800C842E5 /* waterfallViewController.swift in Sources */,
-				04E30139265E442600C842E5 /* cellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
