@@ -4,15 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>webFrameworkUniversal.xcscheme_^#shared#^_</key>
+		<key>waterfallLayoutFramework.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
-		</dict>
-		<key>webViewFramework.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 </dict>
