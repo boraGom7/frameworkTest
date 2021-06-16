@@ -8,12 +8,17 @@
 import UIKit
 import WebKit
 
-public class webViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, UIGestureRecognizerDelegate {
-    @IBOutlet var webView: WKWebView!
-    @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
+class webViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
+    //MARK: @IBOULET
+    @IBOutlet var webView: WKWebView!
+    @IBOutlet weak var backwardItem: UIBarButtonItem!
+    @IBOutlet weak var forwardItem: UIBarButtonItem!
+    
+    var lastOffsetY: CGFloat = 0
     public var searchStr: String = ""
     
+    //MARK: APP LIFE CYCLE: loadView
     public override func loadView() {
         super.loadView()
         
@@ -21,63 +26,59 @@ public class webViewController: UIViewController, WKUIDelegate, WKNavigationDele
 
         webView.uiDelegate = self
         webView.navigationDelegate = self
+        backwardItem.isEnabled = false
+        forwardItem.isEnabled = false
         
         self.view = self.webView
     }
     
-    public func goWeb(str: String) {
-        guard let encodedStr = str.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
-            print("encoding Fail")
-            return
-        }
-        guard let url = URL(string: "https://m.search.naver.com/search.naver?sm=mtp_hty.top&where=m&query=" + encodedStr) else {
-            print("not valid URL")
-            return
-        }
-        let request = URLRequest(url: url)
-        self.webView?.allowsBackForwardNavigationGestures = true
-        webView?.configuration.preferences.javaScriptCanOpenWindowsAutomatically = true
-        webView?.load(request)
-    }
-    
-    public func getStrData(str: String) {
-        self.searchStr = str
-        return
-    }
-    
-    public override func viewDidLoad() {
+    //MARK: APP LIFE CYCLE: viewDidLoad
+    override func viewDidLoad() {
         super.viewDidLoad()
         
-        let swipeRecognize = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(_:)))
-        self.view.addGestureRecognizer(swipeRecognize)
+        let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panAction(_ :)))
+        panRecognizer.delegate = self
+        self.view.addGestureRecognizer(panRecognizer)
+        
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: self, action: nil)
+        self.navigationItem.backBarButtonItem = backBarButtonItem
+        
         setStatusBar(color: .white)
         goWeb(str: searchStr)
     }
     
-    @objc public func swipeAction(_ sender: Any) {
-        let transition: CATransition = CATransition()
-        transition.duration = 0.5
-        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        transition.type = CATransitionType.reveal
-        transition.subtype = CATransitionSubtype.fromLeft
-        self.view.window!.layer.add(transition, forKey: nil)
-        self.dismiss(animated: true, completion: nil)
+    //MARK: APP LIFE CYCLE: viewDidAppear
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setToolbarHidden(false, animated: true)
     }
     
-
-}
-
-public extension UIViewController {
-    func setStatusBar(color: UIColor) {
-        let tag = 12321
-        if let taggedView = self.view.viewWithTag(tag){
-            taggedView.removeFromSuperview()
+    //MARK: @IBACTION
+    @IBAction func goBack(_ sender: Any) {
+        if webView.canGoBack {
+            webView.goBack()
         }
-        let overView = UIView()
-        overView.frame = UIApplication.shared.statusBarFrame
-        overView.backgroundColor = color
-        overView.alpha = 0.9
-        overView.tag = tag
-        self.view.addSubview(overView)
     }
+    
+    @IBAction func goForward(_ sender: Any) {
+        if webView.canGoForward {
+            webView.goForward()
+        }
+    }
+    
+    //MARK: WKWebView Navigation
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        backwardItem.isEnabled = webView.canGoBack
+        forwardItem.isEnabled = webView.canGoForward
+        
+        //MARK: get html page title
+        let javascript = "document.title\n"
+        webView.evaluateJavaScript(javascript) { (result, error) -> Void in
+            if error == nil {
+                self.title = String(describing: result!)
+                print(self.title!)
+            }
+        }
+    }
+    
 }

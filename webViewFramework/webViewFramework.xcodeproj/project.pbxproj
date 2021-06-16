@@ -26,6 +26,10 @@
 		045C69DE2664C67D00FDDD29 /* webViewFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 045C69D02664C67D00FDDD29 /* webViewFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		045C69EA2664C6A000FDDD29 /* webStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045C69E92664C6A000FDDD29 /* webStoryboard.storyboard */; };
 		045C69EE2664C6FB00FDDD29 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C69ED2664C6FB00FDDD29 /* webViewController.swift */; };
+		047C07E62679C91100343367 /* getUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C07E52679C91100343367 /* getUrl.swift */; };
+		047C07E82679CBA300343367 /* setStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C07E72679CBA300343367 /* setStatusBar.swift */; };
+		047C07EC2679D0F300343367 /* gestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C07EB2679D0F300343367 /* gestureRecognizer.swift */; };
+		0480B9F92678793E000A935C /* callWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480B9F82678793E000A935C /* callWebVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		045C69DD2664C67D00FDDD29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045C69E92664C6A000FDDD29 /* webStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = webStoryboard.storyboard; sourceTree = "<group>"; };
 		045C69ED2664C6FB00FDDD29 /* webViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
+		047C07E52679C91100343367 /* getUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getUrl.swift; sourceTree = "<group>"; };
+		047C07E72679CBA300343367 /* setStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setStatusBar.swift; sourceTree = "<group>"; };
+		047C07EB2679D0F300343367 /* gestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gestureRecognizer.swift; sourceTree = "<group>"; };
+		0480B9F82678793E000A935C /* callWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = callWebVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +97,10 @@
 		045C69CF2664C67D00FDDD29 /* webViewFramework */ = {
 			isa = PBXGroup;
 			children = (
+				047C07E42679C8E900343367 /* ViewModel */,
 				045C69D02664C67D00FDDD29 /* webViewFramework.h */,
 				045C69ED2664C6FB00FDDD29 /* webViewController.swift */,
+				0480B9F82678793E000A935C /* callWebVC.swift */,
 				045C69E92664C6A000FDDD29 /* webStoryboard.storyboard */,
 				045C69D12664C67D00FDDD29 /* Info.plist */,
 			);
@@ -104,6 +114,16 @@
 				045C69DD2664C67D00FDDD29 /* Info.plist */,
 			);
 			path = webViewFrameworkTests;
+			sourceTree = "<group>";
+		};
+		047C07E42679C8E900343367 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				047C07E52679C91100343367 /* getUrl.swift */,
+				047C07E72679CBA300343367 /* setStatusBar.swift */,
+				047C07EB2679D0F300343367 /* gestureRecognizer.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047C07E62679C91100343367 /* getUrl.swift in Sources */,
+				047C07EC2679D0F300343367 /* gestureRecognizer.swift in Sources */,
 				045C69EE2664C6FB00FDDD29 /* webViewController.swift in Sources */,
+				047C07E82679CBA300343367 /* setStatusBar.swift in Sources */,
+				0480B9F92678793E000A935C /* callWebVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
