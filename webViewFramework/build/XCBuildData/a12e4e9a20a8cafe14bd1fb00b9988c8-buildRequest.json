@@ -1,0 +1,42 @@
+{
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "e531357941a85d0289c52b77d09f61186b922df9c15c5157ba7c5ad7a75e4a96"
+    }
+  ],
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "configurationName" : "Release",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "BITCODE_GENERATION_MODE" : "bitcode",
+          "BUILD_DIR" : "/Users/mac/Library/Developer/Xcode/DerivedData/webViewFramework-grbphwspleuvpieaatrnhwunlsua/Build/Products",
+          "BUILD_ROOT" : "/Users/mac/Library/Developer/Xcode/DerivedData/webViewFramework-grbphwspleuvpieaatrnhwunlsua/Build/Products",
+          "ONLY_ACTIVE_ARCH" : "NO",
+          "OTHER_CFLAGS" : "-fembed-bitcode",
+          "SDKROOT" : "iphoneos14.5",
+          "TOOLCHAINS" : "com.apple.dt.toolchain.XcodeDefault"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      },
+      "toolchainOverride" : "com.apple.dt.toolchain.XcodeDefault"
+    }
+  },
+  "schemeCommand" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : false,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : false
+}

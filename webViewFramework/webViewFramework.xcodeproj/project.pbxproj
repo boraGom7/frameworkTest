@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0420FDD8267C2B3E00A3D9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0420FDD7267C2B3E00A3D9B1 /* Assets.xcassets */; };
 		045C69D72664C67D00FDDD29 /* webViewFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045C69CD2664C67D00FDDD29 /* webViewFramework.framework */; };
 		045C69DC2664C67D00FDDD29 /* webViewFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C69DB2664C67D00FDDD29 /* webViewFrameworkTests.swift */; };
 		045C69DE2664C67D00FDDD29 /* webViewFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 045C69D02664C67D00FDDD29 /* webViewFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +31,7 @@
 		047C07E82679CBA300343367 /* setStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C07E72679CBA300343367 /* setStatusBar.swift */; };
 		047C07EC2679D0F300343367 /* gestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C07EB2679D0F300343367 /* gestureRecognizer.swift */; };
 		0480B9F92678793E000A935C /* callWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480B9F82678793E000A935C /* callWebVC.swift */; };
+		04C3DDBE2684179C00872804 /* requestTrackingAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C3DDBD2684179C00872804 /* requestTrackingAuthorization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0420FDD7267C2B3E00A3D9B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045C69CD2664C67D00FDDD29 /* webViewFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = webViewFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		045C69D02664C67D00FDDD29 /* webViewFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = webViewFramework.h; sourceTree = "<group>"; };
-		045C69D12664C67D00FDDD29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045C69D62664C67D00FDDD29 /* webViewFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webViewFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		045C69DB2664C67D00FDDD29 /* webViewFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webViewFrameworkTests.swift; sourceTree = "<group>"; };
 		045C69DD2664C67D00FDDD29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +57,8 @@
 		047C07E72679CBA300343367 /* setStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setStatusBar.swift; sourceTree = "<group>"; };
 		047C07EB2679D0F300343367 /* gestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gestureRecognizer.swift; sourceTree = "<group>"; };
 		0480B9F82678793E000A935C /* callWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = callWebVC.swift; sourceTree = "<group>"; };
+		04C3DDBD2684179C00872804 /* requestTrackingAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestTrackingAuthorization.swift; sourceTree = "<group>"; };
+		04C3DDC126841E8700872804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +80,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0420FDDC267C625400A3D9B1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				045C69ED2664C6FB00FDDD29 /* webViewController.swift */,
+				0480B9F82678793E000A935C /* callWebVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		045C69C32664C67D00FDDD29 = {
 			isa = PBXGroup;
 			children = (
+				045C69D02664C67D00FDDD29 /* webViewFramework.h */,
 				045C69CF2664C67D00FDDD29 /* webViewFramework */,
 				045C69DA2664C67D00FDDD29 /* webViewFrameworkTests */,
 				045C69CE2664C67D00FDDD29 /* Products */,
@@ -97,12 +111,12 @@
 		045C69CF2664C67D00FDDD29 /* webViewFramework */ = {
 			isa = PBXGroup;
 			children = (
+				0420FDDC267C625400A3D9B1 /* ViewController */,
 				047C07E42679C8E900343367 /* ViewModel */,
-				045C69D02664C67D00FDDD29 /* webViewFramework.h */,
-				045C69ED2664C6FB00FDDD29 /* webViewController.swift */,
-				0480B9F82678793E000A935C /* callWebVC.swift */,
 				045C69E92664C6A000FDDD29 /* webStoryboard.storyboard */,
-				045C69D12664C67D00FDDD29 /* Info.plist */,
+				04C3DDC026841E7500872804 /* Info.plist */,
+				0420FDD7267C2B3E00A3D9B1 /* Assets.xcassets */,
+				04C3DDBD2684179C00872804 /* requestTrackingAuthorization.swift */,
 			);
 			path = webViewFramework;
 			sourceTree = "<group>";
@@ -204,6 +218,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 045C69C32664C67D00FDDD29;
 			productRefGroup = 045C69CE2664C67D00FDDD29 /* Products */;
@@ -222,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0420FDD8267C2B3E00A3D9B1 /* Assets.xcassets in Resources */,
 				045C69EA2664C6A000FDDD29 /* webStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +278,7 @@
 			files = (
 				047C07E62679C91100343367 /* getUrl.swift in Sources */,
 				047C07EC2679D0F300343367 /* gestureRecognizer.swift in Sources */,
+				04C3DDBE2684179C00872804 /* requestTrackingAuthorization.swift in Sources */,
 				045C69EE2664C6FB00FDDD29 /* webViewController.swift in Sources */,
 				047C07E82679CBA300343367 /* setStatusBar.swift in Sources */,
 				0480B9F92678793E000A935C /* callWebVC.swift in Sources */,
@@ -285,6 +302,17 @@
 			targetProxy = 045C69D82664C67D00FDDD29 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04C3DDC026841E7500872804 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04C3DDC126841E8700872804 /* Base */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		044BAB2026660D7300582613 /* Debug */ = {

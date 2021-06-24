@@ -7,21 +7,15 @@
 
 import UIKit
 
-public func callWebVC() {
-    
-//    let storyboardVC = UIStoryboard(name: "webStoryboard", bundle: Bundle(for: webViewController.self)).instantiateViewController(withIdentifier: "webID") as! webViewController
-//    storyboardVC.modalPresentationStyle = .fullScreen
-//    storyboardVC.getStrData(str: "")
-//    if let topVC = UIApplication.topViewController() {
-//        topVC.present(storyboardVC, animated: true, completion: nil)
-//    }
+public func callWebVC(uID: String) {
     
     let storyBoard = UIStoryboard(name: "webStoryboard", bundle: Bundle(for: webViewController.self))
     guard let vc = storyBoard.instantiateViewController(identifier: "webID") as? webViewController else { return }
-    //webViewController().getStrData(str: "1")
+    vc.getStrData(str: uID)
+    
     if let topVC = UIApplication.topViewController() {
         topVC.navigationController?.pushViewController(vc, animated: true)
-
+        
         topVC.navigationController?.navigationBar.tintColor = .black
         let backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: webViewController.self, action: nil)
         topVC.navigationItem.backBarButtonItem = backBarButtonItem

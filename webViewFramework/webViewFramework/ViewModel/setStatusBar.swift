@@ -15,7 +15,6 @@ extension UIViewController {
         }
         let overView = UIView()
         overView.frame = view.window?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect()
-            //UIApplication.shared.statusBarFrame
         overView.backgroundColor = color
         overView.alpha = 0.9
         overView.tag = tag

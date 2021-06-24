@@ -18,7 +18,6 @@ extension webViewController: UIGestureRecognizerDelegate {
         } else {
             self.navigationController?.setToolbarHidden(true, animated: true)
         }
-        
     }
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {

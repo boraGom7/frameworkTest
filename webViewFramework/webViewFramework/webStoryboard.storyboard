@@ -43,20 +43,26 @@
                                 <action selector="goBack:" destination="hF7-5b-cSP" id="SRI-4g-bB2"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem width="50" style="plain" systemItem="fixedSpace" id="0d0-ZZ-03b"/>
+                        <barButtonItem width="40" style="plain" systemItem="fixedSpace" id="0d0-ZZ-03b"/>
                         <barButtonItem title="Item" image="chevron.forward" catalog="system" id="Xvu-6q-cNN">
                             <connections>
                                 <action selector="goForward:" destination="hF7-5b-cSP" id="43g-sL-bfH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem width="200" style="plain" systemItem="fixedSpace" id="Uq8-M8-CUU"/>
-                        <barButtonItem systemItem="refresh" id="kF5-jp-NQm"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Title" id="dtz-8h-p6v"/>
+                    <navigationItem key="navigationItem" title="Title" id="dtz-8h-p6v">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="backButton" width="32" id="ByY-8C-AC1">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="popVC:" destination="hF7-5b-cSP" id="OdY-SL-dhX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backwardItem" destination="Vg7-Dg-N2L" id="izo-31-ztC"/>
                         <outlet property="forwardItem" destination="Xvu-6q-cNN" id="hyL-zR-Awe"/>
+                        <outlet property="navigationBackItem" destination="ByY-8C-AC1" id="BDc-Bt-LMY"/>
                         <outlet property="webView" destination="kkW-B9-Omi" id="Yml-KF-yAT"/>
                     </connections>
                 </viewController>
@@ -89,6 +95,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="32" height="32"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">

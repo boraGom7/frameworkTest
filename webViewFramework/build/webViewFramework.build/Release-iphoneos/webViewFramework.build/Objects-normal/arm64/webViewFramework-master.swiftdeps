@@ -1,0 +1,9 @@
+version: "Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
+options: "c2c7efdfd8b88ead353c79fbb39fa0dd"
+build_time: [1623826717, 532826000]
+inputs:
+  "/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/ViewModel/getUrl.swift": [9223372036, 854775807]
+  "/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/ViewModel/gestureRecognizer.swift": [9223372036, 854775807]
+  "/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/webViewController.swift": [9223372036, 854775807]
+  "/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/ViewModel/setStatusBar.swift": [9223372036, 854775807]
+  "/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/callWebVC.swift": [9223372036, 854775807]

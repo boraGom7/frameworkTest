@@ -14,9 +14,13 @@ class webViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     @IBOutlet var webView: WKWebView!
     @IBOutlet weak var backwardItem: UIBarButtonItem!
     @IBOutlet weak var forwardItem: UIBarButtonItem!
+    @IBOutlet weak var navigationBackItem: UIBarButtonItem!
     
     var lastOffsetY: CGFloat = 0
-    public var searchStr: String = ""
+    public var searchStr: String = "" {
+        didSet {
+        }
+    }
     
     //MARK: APP LIFE CYCLE: loadView
     public override func loadView() {
@@ -36,13 +40,16 @@ class webViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        requestTA()
+        
         let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panAction(_ :)))
         panRecognizer.delegate = self
         self.view.addGestureRecognizer(panRecognizer)
         
-        let backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: self, action: nil)
-        self.navigationItem.backBarButtonItem = backBarButtonItem
-        
+        //let backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: self, action: nil)
+        //self.navigationItem.backBarButtonItem = backBarButtonItem
+        print(searchStr)
+       
         setStatusBar(color: .white)
         goWeb(str: searchStr)
     }
@@ -65,6 +72,11 @@ class webViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
             webView.goForward()
         }
     }
+    
+    @IBAction func popVC(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     //MARK: WKWebView Navigation
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {

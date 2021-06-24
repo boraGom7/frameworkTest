@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/mac/Library/Developer/Xcode/DerivedData/webViewFramework-grbphwspleuvpieaatrnhwunlsua/Build/Products/Release-iphoneos/webViewFramework.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/build/webViewFramework.build/Release-iphoneos/webViewFramework.build/unextended-module.modulemap",
+    }]
+  }]
+}

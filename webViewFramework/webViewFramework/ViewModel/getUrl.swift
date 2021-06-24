@@ -14,18 +14,21 @@ extension webViewController {
             print("encoding Fail")
             return
         }
+        print(encodedStr)
+        //pid: 전달받은거 넣기
+        //idfa: 사용자가 허용한 경우 넣기
+        //http://external-api.oneplatform.kr/offerwall/views/nmp?pid=1&uid=1&os=IOS&platform=APP
         guard let url = URL(string: "https://m.naver.com") else {
-            //"http://external-api.oneplatform.kr/nmp/offerwalls?uid=\(encodedStr)&os=ios&platform=WEB"
             print("not valid URL")
             return
         }
         let request = URLRequest(url: url)
         //self.webView?.allowsBackForwardNavigationGestures = true
-        webView?.configuration.preferences.javaScriptCanOpenWindowsAutomatically = true
-        webView?.load(request)
+        self.webView?.configuration.preferences.javaScriptCanOpenWindowsAutomatically = true
+        self.webView?.load(request)
     }
     
-    public func getStrData(str: String) {
+    func getStrData(str: String) {
         self.searchStr = str
         return
     }
