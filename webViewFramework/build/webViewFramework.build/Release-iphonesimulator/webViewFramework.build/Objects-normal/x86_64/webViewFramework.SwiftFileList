@@ -1,5 +1,11 @@
 /Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/ViewModel/getUrl.swift
-/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/ViewModel/gestureRecognizer.swift
-/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/webViewController.swift
+/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/response/Data+Gzip.swift
+/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/ViewModel/start.swift
+/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/ViewController/popUpImageViewController.swift
+/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/requestTrackingAuthorization.swift
+/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/ViewController/webViewController.swift
 /Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/ViewModel/setStatusBar.swift
-/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/callWebVC.swift
+/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/ViewModel/getPoint.swift
+/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/response/parameters.swift
+/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/response/requestAPI.swift
+/Users/mac/Documents/GitHub/frameworkTest/webViewFramework/webViewFramework/ViewController/callWebVC.swift
